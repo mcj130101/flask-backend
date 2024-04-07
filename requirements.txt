@@ -2,6 +2,6 @@ Flask
 Gunicorn
 flask_cors
 Werkzeug
-python-docx2text
+docx2python
 pypdf2
 xlwt
