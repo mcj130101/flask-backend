@@ -3,7 +3,7 @@ from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import os
 import re
-import docx2txt
+from docx2python import docx2python
 from PyPDF2 import PdfReader
 import xlwt
 
@@ -34,7 +34,8 @@ def extract_text_from_pdf(pdf_path):
 
 
 def extract_text_from_docx(docx_path):
-    text = docx2txt.process(docx_path)
+    docx_content = docx2python('path/to/file.docx')
+    text = docx_content.text
     return text
 
 
